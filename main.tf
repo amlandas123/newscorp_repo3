@@ -15,7 +15,7 @@ resource "aws_vpc" "amlandas-vpc" {
 resource "aws_internet_gateway" "amlan-igw" {
      vpc_id = aws_vpc.amlandas-vpc.id
      tags = {
-         "Name" = "igw-main"
+         "Name" = "igw-mai"
      }
   
 }
