@@ -5,17 +5,11 @@ provider "aws" {
 }
 
 resource "aws_vpc" "amlandas-vpc" {
-     cidr_block = var.cidr_range
+     cidr_block = "192.166.4.0/24"
      tags = {
-       "Name"=var.vpc_name
+       "Name"= "hello-bihaan"
      }
   
 }
 
-resource "aws_internet_gateway" "amlan-igw" {
-     vpc_id = aws_vpc.amlandas-vpc.id
-     tags = {
-         "Name" = "igw-mai"
-     }
-  
-}
+
